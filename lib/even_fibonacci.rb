@@ -11,11 +11,14 @@ def even_fibonacci_sum(limit)
     j = 1
     while n <= limit do 
         n = fib[i] + fib[j]
-        fib << n
         i += 1
         j += 1 
-        if n.even? 
+
+        if n <= limit 
+        fib << n
+          if n.even?
             sum += n 
+          end 
         end 
     end 
 
